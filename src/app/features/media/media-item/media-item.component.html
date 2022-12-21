@@ -1,0 +1,111 @@
+<!-- <h2>Black Adam (2022)</h2>
+<div>Watched on 12/11/2022</div>
+<div>Superhero Action</div>
+<div>2022</div>
+<div class="tools">
+  <svg class="favorite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"
+    />
+  </svg>
+  <a class="delete">
+    remove
+  </a>  
+  <a class="details">
+    watch
+  </a>
+</div> -->
+
+<!-- 
+<section>
+<button type="button" name="button" (click)='getMovieServiceClass1()'>Movie1</button>
+<ul class="list-group">
+  <li *ngFor="let movie of movieRecieved1" class="list-group-item">{{movie}}</li>
+  <div class="tools">
+    <svg class="favorite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"
+      />
+    </svg>
+    <a class="delete">
+      remove
+    </a>  
+    <a class="details">
+      watch
+    </a>
+  </div> 
+</ul>
+
+<pre></pre>
+<div>
+<button type="button" name="button" (click)='getMovieServiceClass2()'>Movie2</button>
+<ul class="list-group">
+  <li *ngFor="let movie of movieRecieved2" class="list-group-item">{{movie}}</li>
+  <div class="tools">
+    <svg class="favorite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"
+      />
+    </svg>
+    <a class="delete">
+      remove
+    </a>  
+    <a class="details">
+      watch
+    </a>
+  </div> 
+</ul>
+</div>
+</section> -->
+<!-- 
+<section>
+<div class="container"> -->
+
+<h2>Movies Watched</h2>
+
+<!-- <table> 
+  <thead>
+    <th>Movie</th>
+    <th>Year</th>
+    <th>Genre</th>
+    <th>Date</th>
+  </thead>
+  <tbody> 
+    <tr *ngFor="let movie of movies">
+      <td>{{movie.movie}}</td>
+      <td>{{movie.year}}</td>
+      <td>{{movie.genre}}</td>
+      <td>{{movie.date}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</section> -->
+
+<table mat-table [dataSource]="movies" class="mat-elevation-z8">
+
+  <!-- Movie Column -->
+  <ng-container matColumnDef="movie">
+    <th mat-header-cell *matHeaderCellDef> Movie </th>
+    <td mat-cell *matCellDef="let movie"> {{movie.movie}} </td>
+  </ng-container>
+
+  <!-- Year Column -->
+  <ng-container matColumnDef="year">
+    <th mat-header-cell *matHeaderCellDef> Year </th>
+    <td mat-cell *matCellDef="let movie"> {{movie.year}} </td>
+  </ng-container>
+
+  <!-- Genre Column -->
+  <ng-container matColumnDef="genre">
+    <th mat-header-cell *matHeaderCellDef> Genre </th>
+    <td mat-cell *matCellDef="let movie"> {{movie.genre}} </td>
+  </ng-container>
+
+  <!-- Date Column -->
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef> Date </th>
+    <td mat-cell *matCellDef="let movie"> {{movie.date}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
