@@ -12,6 +12,13 @@
     "year":  2022,
     "genre": "History",
     "date":  "05/10/22"
+  },
+
+  {
+    "movie": "Black Panther 2: Wakanda Forever",
+    "year":  2022,
+    "genre": "Superhero",
+    "date":  "20/10/22"
   }
  
 ]
