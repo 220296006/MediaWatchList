@@ -15,6 +15,8 @@ import { MovieFormComponent } from './movie-form/movie-form.component';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { NavComponent } from "./shared/components/nav/nav.component";
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -33,7 +35,9 @@ import { NavComponent } from "./shared/components/nav/nav.component";
         BrowserAnimationsModule,
         AngularMaterialModule,
         FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule
         
-    ]
+    ],
 })
 export class AppModule { }

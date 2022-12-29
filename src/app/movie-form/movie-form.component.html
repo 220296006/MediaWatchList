@@ -1,25 +1,26 @@
 <div class="form">
   <h2 id="registration">Movie Form</h2>
-  <form #enterMovie="ngForm" (ngSubmit)="submit(enterMovie)">
+  <form [formGroup]="enterMovie" (ngSubmit)="saveMovie()">
     <div class="form-group">
-      <label for="movie">Movie Name</label>
-      <input type="text" id="movie" placeholder="Movie name.." name="movie" class="form-control" ngModel>
+      <label for="movie">Movie</label>
+      <input type="text" id="movie" class="form-control" placeholder="Movie name.." name="movie" formControlName="movie" >
     </div>
 
     <div class="form-group">
       <label for="year">Year</label>
-      <input type="text" id="year" placeholder="Year...." name="year" class="form-control" ngModel>
+      <input type="text" id="year" class="form-control" placeholder="Year...." name="year" formControlName="year" >
     </div>
 
     <div class="form-group">
       <label for="genre">Genre</label>
-      <input type="text" id="genre" placeholder="Genre.." name="genre" class="form-control" ngModel>
+      <input type="text" id="genre" class="form-control" placeholder="Genre.." name="genre" formControlName="genre" >
     </div>
 
     <div class="form-group">
       <label for="date">Date</label>
-      <input type="text" id="date" placeholder="Date...." name="date" class="form-control" ngModel>
+      <input type="text" id="date" class="form-control" placeholder="Date...." name="date" formControlName="date" >
     </div>
 
     <button class="btn btn-primary" type="submit" id="btn">Submit</button>
   </form>
+  </div>

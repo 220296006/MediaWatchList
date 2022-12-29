@@ -1,15 +1,32 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import{ MoviesService } from "src/app/shared/services/movies.service";
 
 @Component({
   selector: 'app-movie-form',
   templateUrl: './movie-form.component.html',
   styleUrls: ['./movie-form.component.css']
 })
-export class MovieFormComponent {
+export class MovieFormComponent implements OnInit {
+  
+  constructor(private movie: MoviesService){}
+   enterMovie = new FormGroup({
+      movie: new FormControl( '' ),
+      year:  new FormControl( '' ),
+      genre: new FormControl( '' ),
+      date:  new FormControl( '' )
+});  
+  
 
-  submit(enterMovie: any){
-      console.log("Form Submitted", enterMovie)
+saveMovie(){
+      //console.log("Form Submitted")
+      this.movie.saveMovieData(this.enterMovie.value).subscribe((result)=>{
+        console.log( result );
+      }); 
+  } 
+
+  ngOnInit(): void {
+    
   }
 
 }
