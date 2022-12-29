@@ -1,0 +1,31 @@
+{
+  "movies": [
+    
+  {
+    "movie": "Black Adam",
+    "year":  2022,
+    "genre": "Superhero",
+    "date":  "12/11/2022"
+  },
+
+  {
+    "movie": "Women King",
+    "year":  2022,
+    "genre": "History",
+    "date":  "05/10/22"
+  },
+
+  {
+    "movie": "Black Panther 2: Wakanda Forever",
+    "year":  2022,
+    "genre": "Superhero",
+    "date":  "20/10/22"
+  },
+  {
+    "movie": "Thor 4", 
+    "year": 2022, 
+    "genre":"Superhero",  
+    "date":"12/11/2022"
+  }
+  ]
+}
