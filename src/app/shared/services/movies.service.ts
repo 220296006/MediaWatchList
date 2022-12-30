@@ -7,14 +7,16 @@ import { Injectable } from '@angular/core';
 })
 export class MoviesService {
 
-  url = 'http://localhost:3000/movies';
   
   constructor(private http: HttpClient) { }
+
+  url = "http://localhost:3000/movies";
+  
   getAllMovies(){
-    return this.http.get(this.url)
+    return this.http.get(this.url);
   }
 
-  saveMovieData(movie: any){
+  saveMovieData(movie: Partial<{ movie: string | null; year: string | null; genre: string | null; date: string | null; }>){
     console.log( movie )
     return this.http.post(this.url, movie)
   }   

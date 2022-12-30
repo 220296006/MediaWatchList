@@ -12,11 +12,11 @@ import { HomeComponent } from './features/home/home.component';
 import { ImageComponent } from './features/image/image.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MovieFormComponent } from './movie-form/movie-form.component';
-import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
 import { NavComponent } from "./shared/components/nav/nav.component";
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
     declarations: [
@@ -25,18 +25,19 @@ import { HttpClientModule } from '@angular/common/http';
         HomeComponent,
         ImageComponent,
         MovieFormComponent,
-        NavComponent
+        NavComponent,
+        LoginComponent
     ],
-    providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline' } }],
+    providers: [],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
         AngularMaterialModule,
-        FormsModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+        MatTableModule
         
     ],
 })
