@@ -1,31 +1,46 @@
 {
   "movies": [
-    
-  {
-    "movie": "Black Adam",
-    "year":  2022,
-    "genre": "Superhero",
-    "date":  "12/11/2022"
-  },
-
-  {
-    "movie": "Women King",
-    "year":  2022,
-    "genre": "History",
-    "date":  "05/10/22"
-  },
-
-  {
-    "movie": "Black Panther 2: Wakanda Forever",
-    "year":  2022,
-    "genre": "Superhero",
-    "date":  "20/10/22"
-  },
-  {
-    "movie": "Thor 4", 
-    "year": 2022, 
-    "genre":"Superhero",  
-    "date":"12/11/2022"
-  }
+    {
+      "id": 1,
+      "movie": "Black Adam",
+      "year": 2022,
+      "genre": "Superhero",
+      "date": "12/11/2022"
+    },
+    {
+      "id": 2,
+      "movie": "Women King",
+      "year": 2022,
+      "genre": "History",
+      "date": "05/10/22"
+    },
+    {
+      "id": 3,
+      "movie": "Black Panther 2: Wakanda Forever",
+      "year": 2022,
+      "genre": "Superhero",
+      "date": "20/10/22"
+    },
+    {
+      "id": 4,
+      "movie": "Thor 4",
+      "year": 2022,
+      "genre": "Superhero",
+      "date": "12/11/2022"
+    },
+    {
+      "movie": "Americano",
+      "year": "2919",
+      "genre": "Drama",
+      "date": "2022-12-28",
+      "id": 5
+    },
+    {
+      "movie": "Man of Steel",
+      "year": "2013",
+      "genre": "Superhero",
+      "date": "2022-01-03",
+      "id": 6
+    }
   ]
 }

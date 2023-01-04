@@ -3,34 +3,34 @@ import { MoviesService } from "C:/Users/thabi/Downloads/Compressed/my-project/sr
 
 
 interface Movie {
-    movie: String;
-    year: Number;
-    genre: String;
-    date: String;
+  movie: String;
+  year: Number;
+  genre: String;
+  date: String;
 }
 
-@Component ({
-selector: 'mw-media-item',
-templateUrl: './media-item.component.html',
-styleUrls: ['./media-item.component.css'],
+@Component({
+  selector: 'mw-media-item',
+  templateUrl: './media-item.component.html',
+  styleUrls: ['./media-item.component.css'],
 })
 
-export class MediaItemComponent implements OnInit{
+export class MediaItemComponent implements OnInit {
 
-    constructor(private service:MoviesService){}
-    
-    ngOnInit(): void{
-        this.getAllMovies();
-       }
+  constructor(private service: MoviesService) { }
 
-    movieData: any;
-    displayedColumns: string[] = ['movie', 'year', 'genre', 'date'];
-    // dataSource = this.movieData;
-   
-    getAllMovies(){
-       this.service.getAllMovies().subscribe(response =>{
-       this.movieData = response;
-       console.log(this.movieData)
-        })
-      }
-    }
+  ngOnInit(): void {
+    this.getAllMovies();
+  }
+
+  movieData: any;
+  displayedColumns: string[] = ['movie', 'year', 'genre', 'date'];
+  dataSource = this;
+
+  getAllMovies() {
+    this.service.getAllMovies().subscribe(response => {
+      this.movieData = response;
+      console.log(this.movieData);
+    })
+  }
+}
