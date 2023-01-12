@@ -32,4 +32,4 @@ Backups of the database will be taken to regularly ensure that user data is not 
 The website will be monitored for any errors or issues that may arise during its operation, and these wilL be addressed in a timely manner.
 Support will be provided to users who encounter any issues while using the website.
 
-!UML[https://github.com/220296006/MediaWatchList/blob/main/use%20case%20diagram.png]
+![UML](https://github.com/220296006/MediaWatchList/blob/main/use%20case%20diagram.png)
