@@ -25,6 +25,8 @@ Performance: The website will be designed to be fast and responsive, with minima
 Security: The website will include measures to prevent unauthorized access to user data  and protect against common security threats such as SQL injection and cross-site scripting(XSS) attacks.
 Compatibility: The website will be compatible with modern web browsers, including Chrome, Firefox and Edge,
 Accessibility: The website, following the guidelines of the Web Content Accessibility Guidelines(WCAG) 2.1
+
+
 Deployment and Maintenance
 The website will be  deployed to a web server, and the backend code will be run on a separate server. 
 The website will be regularly tested and updated to ensure it is fully functional and secure.
